@@ -15,24 +15,26 @@
   <title>GOHUNT</title>
 </head>
 <body style="margin: 0;">
-  <header class="gohunt-header transparent-dark">
+  <header class="gohunt-header">
     <div class="gh-main-header">
       <div class="gh-logo">
         <img src="./img/logo-icon-light.svg" alt="GOHUNT LOGO">
       </div>
       <div class="gh-nav-heading">
         <div><a href="">TOOLS</a></div>
-        <div>MAPS</div>
-        <div>VIDEO</div>
-        <div>ARTICLES</div>
-        <div>SHOP</div>
-        <div>MEMBERSHIPS</div>
+        <div><a href="">MAPS</a></div>
+        <div><a href="">OUR STORY</a></div>
+        <div><a href="">VIDEO</a></div>
+        <div><a href="">ARTICLES</a></div>
+        <div><a href="">SHOP</a></div>
+        <div><a href="">MEMBERSHIPS</a></div>
       </div>
       <div class="gh-nav-right">
         <img class="gh-search-ico" src="./img/search-icon.svg">
         <img class="gh-cart-ico"src="./img/cart-icon.svg">
         <div class="gh-point"><span>12</span> PTS</div>
         <img class="gh-menu-ico"src="./img/menu-icon.svg">
+        <img class="gh-user-menu-ico"src="./img/user-icon.svg">
         <div class="gh-log-in"><a href="">Log In</a></div>
         <div class="gh-sign-up"><a href="">Sign UP</a></div>
       </div>
@@ -54,7 +56,7 @@
   var didScroll;
   var lastScrollTop = 0;
   var delta = 5;
-  var navbarHeight = $('.gohunt-header').outerHeight();
+  var navbarHeight = $('header').outerHeight();
 
   $(window).scroll(function(event){
       didScroll = true;
@@ -71,19 +73,45 @@
     var st = $(this).scrollTop();
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
-        return;    
+        return;
+
+    // remove transparent class on scroll
+    if (st > navbarHeight){
+      if ($('header').hasClass('transparent-dark')) {
+        $('header').removeClass('transparent-dark').addClass('transparent-dark_check');
+      }
+      if ($('header').hasClass('transparent-light')) {
+        $('header').removeClass('transparent-light').addClass('transparent-light_check');
+      }
+    }
+    else {
+      if ($('header').hasClass('transparent-dark_check')) {
+        $('header').addClass('transparent-dark').removeClass('transparent-dark_check');
+      }
+      if ($('header').hasClass('transparent-light_check')) {
+        $('header').addClass('transparent-light').removeClass('transparent-light_check');
+      }      
+    }
+
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        $('.gohunt-header').removeClass('nav-down').addClass('nav-up');
+        $('header').removeClass('nav-down').addClass('nav-up');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
-            $('.gohunt-header').removeClass('nav-up').addClass('nav-down');
+            $('header').removeClass('nav-up').addClass('nav-down');
         }
     }    
     lastScrollTop = st;
   }
 </script>
-</html>
+
+<!-- //**
+ * SVG MAP FoR GOHUNT HEADER
+ * This will have all the svg icon with an id. 
+ /*/ -->
+
+
+</html>  

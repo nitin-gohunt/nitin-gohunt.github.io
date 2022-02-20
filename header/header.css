@@ -57,6 +57,7 @@
 }
 .gh-nav-right{
   display: flex;
+  align-items: center;
 }
 .gh-search-ico{
 
@@ -80,6 +81,9 @@
 }
 .gh-menu-ico{
   display: none;
+}
+.gh-user-menu-ico{
+  margin-left: 32px;
 }
 .gh-log-in{
 }
