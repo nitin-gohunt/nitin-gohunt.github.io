@@ -29,32 +29,47 @@
 .gh-main-header{
   display: flex;
   align-items: center;
-  margin: 0 48px;
+  margin: 11px 48px;
 }
 .gh-logo{
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 .gh-nav-heading{
   display: flex;
   flex: 1;
-  margin-top: 27px;
+  /* margin-top: 27px; */
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 .gh-nav-heading > div{
   margin-left: 32px;
-  padding-bottom: 17px;
-  border-bottom: 5px solid transparent;
-  text-decoration:none;
-}
-.gh-nav-heading > div:hover{
-  border-bottom: 5px solid #AA9767;
 }
 .gh-nav-heading > div a{
+  /* padding: 20px 0; */
+  border-bottom: 5px solid transparent;
   text-decoration:none;
   color: #E5E5E5;
+
 }
+/* .gh-nav-heading > div a:hover{
+  border-bottom: 5px solid #AA9767;
+} */
+
+.gh-nav-heading > div a:after {
+  margin-bottom: -26px;
+  padding: 9px 0;
+  display:block;
+  content: '';
+  border-bottom: 5px solid #AA9767;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.gh-nav-heading > div a:hover:after {
+   transform: scaleX(1); 
+  }
+
 .gh-nav-right{
   display: flex;
   align-items: center;
@@ -109,14 +124,6 @@
 }
 .gh-sign-up a:hover{
   background: #fafafa;
-  color: #F37735;
+  color: #1c1c1d;
   text-decoration: none;
 }
-/* .gh-sign-up a{  
-  color: #fafafa;
-  text-decoration: none;
-} */
-/* .gh-sign-up:hover a{
-  color: #F37735;
-  text-decoration: none;
-} */
