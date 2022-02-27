@@ -9,18 +9,25 @@
   position: fixed;
   top: 0;
   transition: top 0.2s ease-in-out;
+  z-index: 999;
 }
 .gohunt-header:hover {
   background: #1c1c1d;
-  color: #E5E5E5 !important;
   transition: .7s ease-in-out;
 }
-.transparent-dark{
+.gohunt-header:hover > .gh-main-header > .gh-nav-heading div a{
+  color: #E5E5E5;
+}
+.transparent-dark {
   background: transparent;
+}
+.transparent-dark .gh-nav-heading div a{
   color: #1c1c1d;
 }
 .transparent-light{
   background: transparent;
+}
+.transparent-light .gh-nav-heading div a{
   color: #E5E5E5;
 }
 .nav-up {
