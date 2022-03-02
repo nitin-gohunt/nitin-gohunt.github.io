@@ -3,7 +3,6 @@
   height: 64px;
   background: #1c1c1d;
   color: #E5E5E5;
-  font-family: 'HCo Ringside Wide';
 
   /* floating header */
   position: fixed;
@@ -45,7 +44,9 @@
   display: flex;
   flex: 1;
   /* margin-top: 27px; */
+  font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -82,55 +83,81 @@
   align-items: center;
 }
 .gh-search-ico{
-
+  margin-left: 32px;
+  width: 21px;
+  height: 21px;
+  fill: #FAFAFA;
+}
+.gh-search-ico:hover{
+  fill: #e5e5e5;
 }
 .gh-cart-ico{
   margin-left: 32px;
+  width: 21px;
+  height: 21px;
+  fill: #FAFAFA;
+}
+.gh-cart-ico:hover{
+  fill: #E5E5E5;
 }
 .gh-point{
   margin-left: 10px;
   margin-top: 4px;
-  font-family: 'HCo Ringside Wide';
+  font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
   font-size: 12px;
   color: #5D5D5D;
   letter-spacing: 0.12em;
 }
 .gh-point > span{
-  font-family: 'HCo Ringside Wide';
+  font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
   font-size: 12px;
   color: #FAFAFA;
   letter-spacing: 0.12em;
 }
-.gh-menu-ico{
+.gh-hamburger-ico{
   display: none;
+  width: 18px;
+  height: 12px;
+  fill: #FAFAFA;
 }
 .gh-user-menu-ico{
   margin-left: 32px;
+  width: 32px;
+  height: 32px;
+  fill: #FAFAFA;
+}
+.gh-user-menu-ico:hover{
+  fill: #e5e5e5;
 }
 .gh-log-in{
 }
 .gh-log-in a{
-  margin-left: 32px;
-  font-family: Inter;
+  padding: 9px 20px;
+  margin-left: 20px;
+  font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
   font-weight: 600;
   font-size: 12px;
   color: #fafafa;
-  text-decoration: none;  
+  text-decoration: none;
+  border-radius: 100px;
+}
+.gh-log-in a:hover{
+  color: #fafafa;
+  background: #404040;
 }
 .gh-sign-up a{
   padding: 9px 20px;
-  margin-left: 32px;
+  margin-left: 20px;
   background: #F37735;
   color: #fafafa;
   text-decoration: none;
   border-radius: 100px;
-  font-family: Inter;
+  font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
   font-weight: 600;
   font-size: 12px;
   text-align: center;
 }
 .gh-sign-up a:hover{
-  background: #fafafa;
-  color: #1c1c1d;
-  text-decoration: none;
+  background: #DB6B30;
+  color: #FAFAFA;
 }
