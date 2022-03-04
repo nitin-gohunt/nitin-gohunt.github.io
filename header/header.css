@@ -91,7 +91,7 @@
 }
 /* Flyout Part */
 .gh-flyout{
-  display: none;
+  /* display: flex; */
   position: absolute;
   top: 64px;
   left: 0px;
@@ -99,38 +99,76 @@
   box-shadow: 0px 16px 32px -28px rgba(0, 0, 0, 0.25);
   color: #404040;
   background: #FFF;
-  /* opacity: 0; */
   visibility: hidden;
-  height: 0;
-
-
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.2s linear;  
 }
 .gh-nav-item:hover + .gh-flyout, .gh-flyout:hover{
   display: flex;
-  /* opacity: 1; */
-  height: 100%;
-  transition:  1s ease-in-out;
+  opacity: 1;
   visibility: visible;
-
-  /* transition: visibility 0s, opacity 0.5s linear; */
-
-
-
 }
 .gh-flyout-col1{
   width: 30%;
   max-width: 406px;
   background: #EEE;
-  border-right: #1c1c1d 1px solid;
+  padding: 0 15px 50px 120px;
+  box-sizing: border-box;
+}
+.gh-flyout-col1 h6, .gh-flyout-col2 h6, .gh-flyout-col3 h6{
+  font-family: 'HCo Ringside Wide', 'Inter', 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 110%;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  margin: 31px 0px;
+  color: #8E8E92;
+}
+.gh-flyout-col1 div, .gh-flyout-col2 div, .gh-flyout-col3 div{
+  font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.gh-flyout-col1 div a, .gh-flyout-col2 div a, .gh-flyout-col3 div a{
+  color: #404040;
+  text-decoration: none;
+}
+.gh-flyout-col1 div a:hover{
+}
+.gh-flyout-col1 div img{
+  vertical-align: middle;
+  margin-right: 18px;
 }
 .gh-flyout-col2{
   width: 30%;
   max-width: 446px;
-  border-right: #1c1c1d 1px solid;
+  box-sizing: border-box;
+  padding: 0 15px 50px 50px;
+  /* border-right: #1c1c1d 1px solid; */
+}
+.gh-flyout-col2 div a{
+}
+.gh-flyout-col2 div a:hover{
 }
 .gh-flyout-col3{
   width: 45%;
-  border-right: #1c1c1d 1px solid;
+  padding: 0 15px 50px 30px;
+  border-left: #E3E3E3 1px solid;
+}
+.gh-flyout-col3 div a{
+}
+.gh-flyout-col3 div a:hover{
+}
+.gh-flyout-col3 div img{
+  vertical-align: middle;
+  width: 165px;
+  height: 90px;
+  border-radius: 5px;
+  margin-right: 18px;
 }
 /* Nav Right Part */
 .gh-nav-right{
@@ -217,4 +255,8 @@
 .gh-sign-up a:hover{
   background: #DB6B30;
   color: #FAFAFA;
+}
+
+@media screen and (max-width: 999px) {
+  
 }
