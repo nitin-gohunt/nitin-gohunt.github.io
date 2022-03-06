@@ -141,6 +141,8 @@
 .gh-flyout-col1 div a, .gh-flyout-col2 div a, .gh-flyout-col3 div a{
   color: #404040;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .gh-flyout-col1 div a:hover{
 }
@@ -287,23 +289,27 @@
     top: 0;
     left: 0;
   }
-  .gh-nav-heading{
+  .gh-nav-wrap-2{
+    display: flex;
+    flex-direction: column;
     max-width: 322px;
     background: #1C1C1D;
     height: 100vh;
-    flex-direction: column;
     overflow-y: scroll;
     scrollbar-width: thin;
-  }
-  .gh-nav-heading::-webkit-scrollbar {
+  }  
+  .gh-nav-wrap-2::-webkit-scrollbar {
     width: 5px;
   }
-  .gh-nav-heading::-webkit-scrollbar-track {
-    background: #000; 
+  .gh-nav-wrap-2::-webkit-scrollbar-track {
+    background: #1C1C1D; 
   }   
-  .gh-nav-heading::-webkit-scrollbar-thumb {
+  .gh-nav-wrap-2::-webkit-scrollbar-thumb {
     background: #AA9767;
     border-radius: 5px;
+  }
+  .gh-nav-heading{    
+    flex-direction: column;    
   }
   .gh-nav-heading > div {
     margin: 0px 32px;
@@ -311,8 +317,91 @@
     font-size: 18px;
     border-bottom: 1px solid #404040;
   }
-  /* body{
+  .gh-nav-item-menu{
+    font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid #AA9767;
+    color: #AA9767;
+    margin: 0px 32px;
+    padding: 22px 0;
+  }
+  .gh-close-mob-ico{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .gh-log-in-m a{
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 16px 16px;
+    font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fafafa;
+    text-decoration: none;
+    border: 2px #fafafa solid;
+    border-radius: 100px;
+  }
+  .gh-log-in-m a:hover{
+    color: #fafafa;
+    background: #404040;
+    transition: 0s ease-in-out !important;
+  }
+  .gh-sign-up-m a{
+    display: block;  
+    padding: 12px 20px;
+    margin: 16px 16px;
+    background: #F37735;
+    color: #fafafa;
+    text-decoration: none;
+    border-radius: 100px;
+    font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+  }
+  .gh-sign-up-m a:hover{
+    background: #DB6B30;
+    color: #FAFAFA;
+  }
+  .gh-nav-item-account{
+    display: flex;
+    margin-top: auto;
+    border-top:1px #404040 solid;
+    margin: auto 0 16px 0;
+    padding-top: 16px;
+  }
+  .gh-usr-profile{
+    width: 32px;
+    height: 32px;
+    margin: 8px 8px 0px 16px;
+    border: 2px solid #3D3D40;
+    box-sizing: border-box;
+    border-radius: 32px;    
+  }
+  .gh-usr-name{
+    font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FAFAFA;
+    margin: 5px 0;
+  }
+  .gh-usr-membership{
+    font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #AA9767;
+    margin: 0;
+  }
+  body{
     overflow-y:hidden;
-  } */
+  }
   
 }
