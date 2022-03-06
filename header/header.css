@@ -306,16 +306,28 @@
   }   
   .gh-nav-wrap-2::-webkit-scrollbar-thumb {
     background: #AA9767;
-    border-radius: 5px;
+    border-radius: 20px;
   }
   .gh-nav-heading{    
     flex-direction: column;    
   }
   .gh-nav-heading > div {
-    margin: 0px 32px;
+    margin: 0px 18px;
     padding: 22px 0;
     font-size: 18px;
     border-bottom: 1px solid #404040;
+    position: relative;
+  }
+  .gh-nav-heading div .gh-nav-item::after {
+    position: absolute;
+    right: 7px;
+    top: 22px;
+    content: url('./img/gh-arrow-right.svg');
+    background-repeat: no-repeat;
+  }
+  .gh-nav-heading .gh-nav-item a:hover:after{
+    transform: scaleX(0); 
+    border-bottom: 5px solid transparent;
   }
   .gh-nav-item-menu{
     font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
@@ -324,7 +336,7 @@
     letter-spacing: 0.12em;
     border-bottom: 1px solid #AA9767;
     color: #AA9767;
-    margin: 0px 32px;
+    margin: 0px 18px;
     padding: 22px 0;
   }
   .gh-close-mob-ico{
@@ -337,7 +349,7 @@
     display: block;
     text-align: center;
     padding: 10px 20px;
-    margin: 16px 16px;
+    margin: 0 16px 16px 16px;
     font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -378,7 +390,7 @@
   .gh-usr-profile{
     width: 32px;
     height: 32px;
-    margin: 8px 8px 0px 16px;
+    margin: 5px 8px 0px 16px;
     border: 2px solid #3D3D40;
     box-sizing: border-box;
     border-radius: 32px;    
@@ -388,7 +400,7 @@
     font-weight: 600;
     font-size: 16px;
     color: #FAFAFA;
-    margin: 5px 0;
+    margin: 3px 0;
   }
   .gh-usr-membership{
     font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
