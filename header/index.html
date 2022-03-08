@@ -63,10 +63,6 @@
               </div>
             </div>
             <div>
-              <div class="gh-nav-item"><a href="#">OUR STORY</a></div>            
-              <div class="gh-flyout"></div>
-            </div>
-            <div>
               <div class="gh-nav-item"><a href="#">VIDEO</a></div>            
               <div class="gh-flyout"></div>
             </div>
@@ -181,23 +177,43 @@ $('.gh-nav-wrap').click(function () {
   $('body').css('overflow-y', 'unset');
 }).children().click(function(e) { return false; });
 
+var gh_mobile_menu_check;
 $('.gh-nav-item').click(function () {
-  $('.gh-nav-item').removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
-});
-
-$('.gh-nav-item-clicked').click(function () {
-  $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+  if($(window).width() <= 999){
+    if(gh_mobile_menu_check == undefined || gh_mobile_menu_check == 'opened'){
+      $('.gh-nav-item-menu').css('display', 'none');
+      $(this).removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
+      $(this).next().children('.gh-flyout-col1').css('display', 'block');  
+      $(this).parent().siblings().css('display', 'none');
+      gh_mobile_menu_check = 'closed';
+    } 
+    else {
+      $('.gh-nav-item-menu').css('display', 'block');
+      $(this).removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+      $(this).next().children('.gh-flyout-col1').css('display', 'none');  
+      $(this).parent().siblings().css('display', 'block');
+      gh_mobile_menu_check = 'opened';
+    }
+  }
 });
 
 // Screen Resize
 $( window ).resize(function() {
   if ($(window).width() <= 999) {
     // For Mobile
+    $('.gh-nav-wrap').css('display', 'none');
+    $('.gh-nav-item-menu').css('display', 'block');
+    $('.gh-flyout-col1').css('display', 'none');  
   }
   else {
     // For Desktop
     $('.gh-nav-wrap').css('display', 'block');
-    $('body').css('overflow-y', 'unset');
+    $('body').css('overflow-y', 'unset');    
+    $('.gh-nav-item-menu').css('display', 'none');
+    $('.gh-flyout-col1').css('display', 'block');  
+    $('.gh-nav-heading').children().css('display', 'block');
+    $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+    $('.gh-nav-item').parent().siblings().css('display', 'block');
   }
 });
 

@@ -404,7 +404,7 @@
     content: '' !important;
   }
   .gh-flyout {
-    display: unset; 
+    /* display: none;  */
     position: unset;
     top: unset;
     left: unset;
@@ -414,6 +414,7 @@
     background: unset;
   }
   .gh-flyout-col1{
+    display: none;
     width: 100%;
     max-width: unset;
     background: unset;
