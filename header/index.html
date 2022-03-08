@@ -88,7 +88,7 @@
           <div class="gh-log-in-m"><a href="">Log In</a></div>
           <div class="gh-nav-item-account">
             <!-- <svg class="gh-user-menu-ico" style="margin: 5px 8px 0px 16px;"><use xlink:href="#gh-user-menu-ico"/></svg> -->
-            <img class="gh-usr-profile" src="./img/colorado-1-about.jpg">
+            <img class="gh-usr-profile-left-nav" src="./img/colorado-1-about.jpg">
             <div>
               <p class="gh-usr-name">Nitin K.</p>
               <p class="gh-usr-membership">INSIDER</p>
@@ -103,6 +103,7 @@
         <div class="gh-point"><span>12 </span> PTS</div>
         <svg class="gh-hamburger-ico"><use xlink:href="#gh-hamburger-ico"/></svg>
         <svg class="gh-user-menu-ico"><use xlink:href="#gh-user-menu-ico"/></svg>
+        <!-- <img class="gh-usr-profile" src="./img/colorado-1-about.jpg"> -->
         <div class="gh-log-in"><a href="">Log In</a></div>
         <div class="gh-sign-up"><a href="">Sign UP</a></div>
       </div>
@@ -165,8 +166,42 @@
 
 
 
- 
+<script>
+// Mobile Navigation
+$('.gh-hamburger-ico').click(function () {
+  $('.gh-nav-wrap').css('display', 'block');
+  $('body').css('overflow-y', 'hidden');
+});
+$('.gh-close-mob-ico').click(function () {
+  $('.gh-nav-wrap').css('display', 'none');
+  $('body').css('overflow-y', 'unset');
+});
+$('.gh-nav-wrap').click(function () {
+  $('.gh-nav-wrap').css('display', 'none');
+  $('body').css('overflow-y', 'unset');
+}).children().click(function(e) { return false; });
 
+$('.gh-nav-item').click(function () {
+  $('.gh-nav-item').removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
+});
+
+$('.gh-nav-item-clicked').click(function () {
+  $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+});
+
+// Screen Resize
+$( window ).resize(function() {
+  if ($(window).width() <= 999) {
+    // For Mobile
+  }
+  else {
+    // For Desktop
+    $('.gh-nav-wrap').css('display', 'block');
+    $('body').css('overflow-y', 'unset');
+  }
+});
+
+</script>
 
 <script>
   //********************************//

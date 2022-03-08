@@ -275,13 +275,49 @@
   /* .gh-nav-heading > div{
     display: none;
   } */
-  .gh-flyout-col1, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up{
+  .gh-flyout-col1 h6, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up{
     display: none;
   }
   .gh-hamburger-ico, .gh-nav-item-menu, .gh-nav-item-account, .gh-log-in-m, .gh-sign-up-m{
     display: block;
   }
+  .gh-logo{
+    position: absolute;
+    left: calc(50% - 16px);
+    top: 13px;
+  }
+  .gh-hamburger-ico{
+    position: absolute;
+    left: 16px;
+    top: 26px;
+    cursor: pointer;
+  }
+  .gh-search-ico{
+    position: absolute;
+    left: 22px;
+    top: 22px;
+  }
+  .gh-cart-ico{
+    position: absolute;
+    right: 62px;
+    top: 18px;
+  }
+  .gh-point{
+    display: none;
+  }
+  .gh-user-menu-ico{
+    position: absolute;
+    right: 14px;
+    top: 17px;
+  }
+  .gh-usr-profile{
+    position: absolute;
+    right: 14px;
+    top: 12px;
+  }
   .gh-nav-wrap{
+    display: none;
+    z-index: 1;
     background: rgba(0, 0, 0, 0.75);
     height: 100vh;
     width: 100%;
@@ -345,6 +381,48 @@
     margin-right: 5px;
     vertical-align: middle;
   }
+  .gh-nav-item-clicked{
+    font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid #AA9767;
+    padding: 22px 0 22px 25px;    
+  }
+  .gh-nav-item-clicked a {
+    color: #AA9767 !important;
+  }
+  .gh-nav-item-clicked::before {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    content: url('./img/gh-right-arrow-gold.svg');
+    background-repeat: no-repeat;
+  }
+  .gh-nav-item-clicked::after {
+    content: '' !important;
+  }
+  .gh-flyout {
+    display: unset; 
+    position: unset;
+    top: unset;
+    left: unset;
+    width: 100%;
+    box-shadow: unset;
+    color: #404040;
+    background: unset;
+  }
+  .gh-flyout-col1{
+    width: 100%;
+    max-width: unset;
+    background: unset;
+    padding: 22px 0px 0px 0px;
+    box-sizing: border-box;
+  }
+  .gh-flyout-col1 div a{
+    color: #FAFAFA;
+}
   .gh-log-in-m a{
     display: block;
     text-align: center;
@@ -387,7 +465,7 @@
     margin: auto 0 16px 0;
     padding-top: 16px;
   }
-  .gh-usr-profile{
+  .gh-usr-profile-left-nav{
     width: 32px;
     height: 32px;
     margin: 5px 8px 0px 16px;
@@ -412,8 +490,8 @@
     color: #AA9767;
     margin: 0;
   }
-  body{
+  /* body{
     overflow-y:hidden;
-  }
+  } */
   
 }
