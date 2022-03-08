@@ -185,6 +185,7 @@ $('.gh-nav-item').click(function () {
       $(this).removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
       $(this).next().children('.gh-flyout-col1').css('display', 'block');  
       $(this).parent().siblings().css('display', 'none');
+      $('.gh-nav-item-account').css('display', 'none');
       gh_mobile_menu_check = 'closed';
     } 
     else {
@@ -192,6 +193,7 @@ $('.gh-nav-item').click(function () {
       $(this).removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
       $(this).next().children('.gh-flyout-col1').css('display', 'none');  
       $(this).parent().siblings().css('display', 'block');
+      $('.gh-nav-item-account').css('display', 'flex');
       gh_mobile_menu_check = 'opened';
     }
   }
@@ -203,7 +205,8 @@ $( window ).resize(function() {
     // For Mobile
     $('.gh-nav-wrap').css('display', 'none');
     $('.gh-nav-item-menu').css('display', 'block');
-    $('.gh-flyout-col1').css('display', 'none');  
+    $('.gh-flyout-col1').css('display', 'none');
+    $('.gh-nav-item-account').css('display', 'flex');
   }
   else {
     // For Desktop
@@ -214,6 +217,7 @@ $( window ).resize(function() {
     $('.gh-nav-heading').children().css('display', 'block');
     $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
     $('.gh-nav-item').parent().siblings().css('display', 'block');
+    $('.gh-nav-item-account').css('display', 'none');
   }
 });
 
