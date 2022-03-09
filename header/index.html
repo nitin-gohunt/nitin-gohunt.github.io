@@ -212,7 +212,7 @@ $( window ).resize(function() {
     last_gh_header_width = $(window).width();
     // console.log('w',$(window).width());
   }
-  else {
+  if ($(window).width() > 999) {
     // For Desktop
     $('.gh-nav-wrap').css('display', 'block');
     $('body').css('overflow-y', 'unset');    
