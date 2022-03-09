@@ -201,13 +201,16 @@ $('.gh-nav-item').click(function () {
 });
 
 // Screen Resize
-$( window ).resize(function() {
-  if ($(window).width() <= 999) {
+var last_gh_header_width = $(window).width();
+$( window ).resize(function() {  
+  if ($(window).width() <= 999 && $(window).width()!=last_gh_header_width) {
     // For Mobile
     $('.gh-nav-wrap').css('display', 'none');
     $('.gh-nav-item-menu').css('display', 'block');
     $('.gh-flyout-col1').css('display', 'none');
     $('.gh-nav-item-account').css('display', 'flex');
+    last_gh_header_width = $(window).width();
+    // console.log('w',$(window).width());
   }
   else {
     // For Desktop
