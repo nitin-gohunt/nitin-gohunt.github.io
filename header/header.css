@@ -77,6 +77,7 @@
   text-decoration:none;
   color: #E5E5E5;
   white-space: nowrap;
+  padding-top: 24px;
 }
 .gh-nav-heading .gh-nav-item a:after {
   margin-bottom: -26px;
@@ -109,10 +110,10 @@
   /* opacity: 1;
   visibility: visible; */
 }
-.gh-flyout:hover ~ .gh-nav-item a:hover:after{
+/* .gh-flyout:hover ~ .gh-nav-item a:hover:after{
   border-bottom: 5px solid #AA9767;
   transform: scaleX(1);
-}
+} */
 .flyout-spacer{
   width: calc((100% - 1168px)/2);
   background:#EEE;
@@ -409,7 +410,7 @@
     content: '' !important;
   }
   .gh-flyout {
-    /* display: none;  */
+    display: block; 
     position: unset;
     top: unset;
     left: unset;
@@ -428,7 +429,7 @@
   }
   .gh-flyout-col1 div a{
     color: #FAFAFA;
-}
+  }
   .gh-log-in-m a{
     display: block;
     text-align: center;
