@@ -92,7 +92,7 @@
 }
 /************ Flyout Part ************/
 .gh-flyout{
-  display: flex;
+  display: none;
   position: absolute;
   top: 64px;
   left: 0px;

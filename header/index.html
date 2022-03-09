@@ -15,7 +15,7 @@
   <title>GOHUNT</title>
 </head>
 <body style="margin: 0;">
-  <header class="gohunt-header">
+  <header class="gohunt-header transparent-light">
     <div class="gh-main-header">
       <div class="gh-logo">
         <a href="/"><svg class="gh-gohunt-logo"><use xlink:href="#gh-gohunt-logo"/></svg></a>
@@ -173,16 +173,24 @@ $('.gh-close-mob-ico').click(function () {
   $('.gh-nav-wrap').css('display', 'none');
   $('body').css('overflow-y', 'unset');
 });
-$('.gh-nav-wrap').click(function () {
+$('.gh-nav-wrap').on('click', function(e) {
   if($(window).width() <= 999){
+    if (e.target !== this) return;
     $('.gh-nav-wrap').css('display', 'none');
     $('body').css('overflow-y', 'unset');
   }
-}).children().click(function(e) { if($(window).width() <= 999){ return false; } });
+});
+// $('.gh-nav-wrap').click(function () {
+//   if($(window).width() <= 999){
+//     $('.gh-nav-wrap').css('display', 'none');
+//     $('body').css('overflow-y', 'unset');
+//   }
+// }).children().click(function(e) { if($(window).width() <= 999){ return false; } });
 
 var gh_mobile_menu_check;
-$('.gh-nav-item').click(function () {
+$('.gh-flyout:has(".gh-flyout-col1")').siblings('.gh-nav-item').click(function () {
   if($(window).width() <= 999){
+    event.preventDefault();
     if(gh_mobile_menu_check == undefined || gh_mobile_menu_check == 'opened'){
       $('.gh-nav-item-menu').css('display', 'none');
       $(this).removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
