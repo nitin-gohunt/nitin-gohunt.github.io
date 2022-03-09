@@ -113,11 +113,15 @@
   border-bottom: 5px solid #AA9767;
   transform: scaleX(1);
 }
+.flyout-spacer{
+  width: calc((100% - 1168px)/2);
+  background:#EEE;
+}
 .gh-flyout-col1{
-  width: 30%;
-  max-width: 406px;
+  width: 25%;
+  max-width: 300px;
   background: #EEE;
-  padding: 0 15px 50px 120px;
+  padding: 0 10px 50px 10px;
   box-sizing: border-box;
 }
 .gh-flyout-col1 h6, .gh-flyout-col2 h6, .gh-flyout-col3 h6{
@@ -152,9 +156,9 @@
 }
 .gh-flyout-col2{
   width: 30%;
-  max-width: 446px;
+  max-width: 400px;
   box-sizing: border-box;
-  padding: 0 15px 50px 50px;
+  padding: 0 10px 50px 50px;
   /* border-right: #1c1c1d 1px solid; */
 }
 .gh-flyout-col2 div a{
@@ -162,8 +166,9 @@
 .gh-flyout-col2 div a:hover{
 }
 .gh-flyout-col3{
-  width: 45%;
-  padding: 0 15px 50px 30px;
+  width: 40%;
+  max-width: 468px;
+  padding: 0 10px 50px 30px;
   border-left: #E3E3E3 1px solid;
 }
 .gh-flyout-col3 div a{
