@@ -394,14 +394,15 @@
     line-height: 110%;
     letter-spacing: 0.12em;
     border-bottom: 1px solid #AA9767;
-    padding: 22px 0 22px 25px;    
+    padding: 2px 0 22px 25px;    
   }
   .gh-nav-item-clicked a {
     color: #AA9767 !important;
+    text-decoration: none;
   }
   .gh-nav-item-clicked::before {
     position: absolute;
-    top: 45px;
+    top: 25px;
     left: 0px;
     content: url('./img/gh-right-arrow-gold.svg');
     background-repeat: no-repeat;
