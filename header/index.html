@@ -139,8 +139,8 @@
         <svg class="gh-hamburger-ico"><use xlink:href="#gh-hamburger-ico"/></svg>
         <svg class="gh-user-menu-ico"><use xlink:href="#gh-user-menu-ico"/></svg>
         <!-- <img class="gh-usr-profile" src="./img/colorado-1-about.jpg"> -->
-        <div class="gh-log-in"><a href="">Log In</a></div>
-        <div class="gh-sign-up"><a href="">Sign UP</a></div>
+        <!-- <div class="gh-log-in"><a href="">Log In</a></div>
+        <div class="gh-sign-up"><a href="">Sign UP</a></div> -->
       </div>
     </div>
   </header>
@@ -203,7 +203,7 @@
 
 
 <script>
-// Mobile Navigation
+// Mobile Menu Navigation
 $('.gh-hamburger-ico').click(function () {
   $('.gh-nav-wrap').css('display', 'block');
   $('body').css('overflow-y', 'hidden');
@@ -260,6 +260,18 @@ $('.gh-nav-account-back').click(function () {
       $('.gh-nav-account-menu').css('display', 'none');
 });
 
+//Desktop User Icon Hover - Menu Open
+$('.gh-user-menu-ico').hover(function(){  
+  $('.gh-nav-account-menu').css("display", "flex");
+  }, function(){
+  $('.gh-nav-account-menu').css("display", "none");
+});
+$('.gh-nav-account-menu').hover(function(){
+  $('.gh-nav-account-menu').css("display", "flex");
+  }, function(){
+  $('.gh-nav-account-menu').css("display", "none");
+});
+
 // Screen Resize
 var last_gh_header_width = $(window).width();
 $( window ).resize(function() {  
@@ -269,6 +281,11 @@ $( window ).resize(function() {
     $('.gh-nav-item-menu').css('display', 'block');
     $('.gh-flyout-col1').css('display', 'none');
     $('.gh-nav-item-account').css('display', 'flex');
+
+    $('.gh-nav-account-back').css('display', 'none');
+    $('.gh-nav-heading').css('display', 'flex');
+    $('.gh-nav-account-menu').css('display', 'none');
+
     last_gh_header_width = $(window).width();
     // console.log('w',$(window).width());
   }
