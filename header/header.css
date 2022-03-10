@@ -106,7 +106,7 @@
   transition: visibility 0.1s, opacity 0.2s linear;   */
 }
 .gh-nav-item:hover + .gh-flyout, .gh-flyout:hover{
-  display: flex;
+  display: flex !important;
   /* opacity: 1;
   visibility: visible; */
 }
@@ -273,7 +273,7 @@
   color: #FAFAFA;
 }
 
-.gh-nav-item-menu, .gh-nav-item-account, .gh-log-in-m, .gh-sign-up-m{
+.gh-nav-item-menu, .gh-nav-item-account, .gh-log-in-m, .gh-sign-up-m, .gh-nav-account-back, .gh-nav-account-menu{
   display: none;
 }
 
@@ -411,7 +411,7 @@
     content: '' !important;
   }
   .gh-flyout {
-    display: block; 
+    display: block !important; 
     position: unset;
     top: unset;
     left: unset;
@@ -498,8 +498,46 @@
     color: #AA9767;
     margin: 0;
   }
-  /* body{
-    overflow-y:hidden;
-  } */
+  .gh-nav-account-back{
+    display: none;
+    font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid #AA9767;
+    color: #AA9767;
+    margin: 0px 18px;
+    padding: 22px 0;
+  }
+  .gh-nav-account-menu{
+    display: none;
+    flex-direction: column;
+    font-family: 'Inter', 'Hevetica', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .gh-nav-account-menu a{
+    text-decoration: none;
+    color: #FAFAFA;
+    border-bottom: 1px solid #404040;
+    margin: 0 16px;
+  }
+  .gh-basecamp-ico svg,.gh-pt-ico svg,.gh-account-setting-ico svg,.gh-logout-ico svg,.gh-ready-upgrade svg{
+    width: 20px;
+    height: 20px;
+    fill: #FAFAFA;
+    vertical-align: middle;
+    margin:20px 16px 20px 0;    
+  }
+  .gh-ready-upgrade{
+    border: 2px #fafafa solid !important;
+    border-radius: 50px;
+    margin: 20px 16px !important;
+    text-align: center;
+  }
+  .gh-ready-upgrade svg{
+    margin: 10px 10px 10px 0 !important;
+  }
   
 }
