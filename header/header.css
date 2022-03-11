@@ -13,7 +13,7 @@
   background: #1c1c1d;
   transition: .7s ease-in-out;
 }
-.gohunt-header:hover .gh-nav-item div a,
+.gohunt-header:hover .gh-nav-item a,
 .gohunt-header:hover .gh-log-in a,
 .gohunt-header:hover .gh-point > span,
 .gohunt-header:hover .gh-logo .gh-gohunt-logo,
