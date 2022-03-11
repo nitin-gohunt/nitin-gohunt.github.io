@@ -141,7 +141,7 @@
   font-size: 16px;
   line-height: 19px;
   text-transform: capitalize;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .gh-flyout-col1 div a, .gh-flyout-col2 div a, .gh-flyout-col3 div a{
   color: #404040;
@@ -263,6 +263,14 @@
   fill: #FAFAFA;
   cursor: pointer;
 }
+.gh-usr-profile{
+  width: 32px;
+  height: 32px;
+  margin-left: 32px;
+  border: 2px solid #3D3D40;
+  box-sizing: border-box;
+  border-radius: 32px;
+}
 .gh-user-menu-ico:hover{
   fill: #e5e5e5;
 }
@@ -338,7 +346,7 @@
   background: #DB6B30;
   color: #FAFAFA;
 }
-.gh-nav-item-menu, .gh-nav-item-account, .gh-log-in-m, .gh-sign-up-m, .gh-nav-account-back{
+.gh-nav-item-menu, .gh-nav-item-account, .gh-log-in-m, .gh-sign-up-m, .gh-nav-account-back,.gh-user-menu-ico-mob-not-loggedin{
   display: none;
 }
 
@@ -384,7 +392,21 @@
   .gh-usr-profile{
     position: absolute;
     right: 14px;
-    top: 12px;
+    top: 17px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #3D3D40;
+    box-sizing: border-box;
+    border-radius: 32px;
+  }
+  .gh-user-menu-ico-mob-not-loggedin{
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 17px;
+    fill: #FAFAFA;
+    width: 32px;
+    height: 32px;
   }
   .gh-nav-wrap{
     display: none;
