@@ -350,6 +350,10 @@
   display: none;
 }
 
+/* *************************************/
+/* *********MOBILE MEDIA QUERY *********/
+/* *************************************/
+
 @media screen and (max-width: 999px) {
   .gohunt-header:hover {
     background: unset;
@@ -458,6 +462,9 @@
     top: 22px;
     content: url('./img/gh-arrow-right.svg');
     background-repeat: no-repeat;
+  }
+  .gohunt-header:hover .gh-nav-item a{
+    transition: unset;
   }
   .gh-nav-heading .gh-nav-item a:hover:after{
     transform: scaleX(0); 
