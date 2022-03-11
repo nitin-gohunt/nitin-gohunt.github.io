@@ -101,7 +101,7 @@
                 <div class="gh-flyout-col3">
                   <h6>Recent Articles</h6>
                   <div><a href=""><img src="./temp/hero-img-2.jpg"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p></a></div>
-                  <div><a href=""><img src="./img/hero_image.jpg"><p>Lorem ipsum dolor sit amet, consectetur</p></a></div>
+                  <div><a href=""><img src="./temp/hero_image.jpg"><p>Lorem ipsum dolor sit amet, consectetur</p></a></div>
                   <div><a href=""><img src="./temp/hero2.png"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p></a></div>
                 </div>
               </div>
@@ -143,7 +143,7 @@
                 <div class="gh-flyout-col3">
                   <h6>Recent Articles</h6>
                   <div><a href=""><img src="./temp/hero-img-2.jpg"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p></a></div>
-                  <div><a href=""><img src="./img/hero_image.jpg"><p>Lorem ipsum dolor sit amet, consectetur</p></a></div>
+                  <div><a href=""><img src="./temp/hero_image.jpg"><p>Lorem ipsum dolor sit amet, consectetur</p></a></div>
                   <div><a href=""><img src="./temp/hero2.png"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p></a></div>
                 </div>
               </div>
@@ -172,7 +172,7 @@
           <div class="gh-log-in-m"><a href="">Log In</a></div> -->
           <div class="gh-nav-item-account">
             <!-- <svg class="gh-user-menu-ico" style="margin: 5px 8px 0px 16px;"><use xlink:href="#gh-user-menu-ico"/></svg> -->
-            <img class="gh-usr-profile-left-nav" src="./img/colorado-1-about.jpg">
+            <img class="gh-usr-profile-left-nav" src="./temp/colorado-1-about.jpg">
             <div>
               <p class="gh-usr-name">Nitin K.</p>
               <p class="gh-usr-membership">INSIDER</p>
@@ -210,8 +210,8 @@
   <section class="temp-section">
     <div style="height: 2000px;">      
       <img style="width: 100%;" src="./temp/hero-img-2.jpg">
-      <!-- <img style="width: 100%;" src="./img/hero_image.jpg"> -->
-      <!-- <img style="width: 100%;" src="./img/colorado-1-about.jpg"> -->
+      <!-- <img style="width: 100%;" src="./temp/hero_image.jpg"> -->
+      <!-- <img style="width: 100%;" src="./temp/colorado-1-about.jpg"> -->
     </div>
   </section>
 
@@ -267,16 +267,19 @@
 // Mobile Menu Navigation
 $('.gh-hamburger-ico').click(function () {
   $('.gh-nav-wrap').css('display', 'block');
+  $(".gh-nav-wrap-2").animate({left: '0'}, "fast");
   $('body').css('overflow-y', 'hidden');
 });
 $('.gh-close-mob-ico').click(function () {
   $('.gh-nav-wrap').css('display', 'none');
+  $(".gh-nav-wrap-2").css('left', '-322px');
   $('body').css('overflow-y', 'unset');
 });
 $('.gh-nav-wrap').on('click', function(e) {
   if($(window).width() <= 999){
     if (e.target !== this) return;
     $('.gh-nav-wrap').css('display', 'none');
+    $(".gh-nav-wrap-2").css('left', '-322px');
     $('body').css('overflow-y', 'unset');
   }
 });
@@ -339,8 +342,11 @@ $( window ).resize(function() {
   if ($(window).width() <= 999 && $(window).width()!=last_gh_header_width) {
     // For Mobile
     $('.gh-nav-wrap').css('display', 'none');
+    $(".gh-nav-wrap-2").css('left', '-322px');
     $('.gh-nav-item-menu').css('display', 'block');
     $('.gh-flyout-col1').css('display', 'none');
+    $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+    $('.gh-nav-item').parent().siblings().css('display', 'block');
     $('.gh-nav-item-account').css('display', 'flex');
 
     $('.gh-nav-account-back').css('display', 'none');
