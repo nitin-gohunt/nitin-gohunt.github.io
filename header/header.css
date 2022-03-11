@@ -149,7 +149,7 @@
   display: flex;
   align-items: center;
 }
-.gh-flyout-col1 div a:hover{
+.gh-flyout-col1 div a:hover, .gh-flyout-col2 div a:hover{
   filter: invert(36%) sepia(0%) saturate(0%) hue-rotate(216deg) brightness(99%) contrast(95%);
 }
 .gh-flyout-col1 div svg{
@@ -160,6 +160,37 @@
   pointer-events: none;
   filter: invert(87%) sepia(0%) saturate(153%) hue-rotate(90deg) brightness(88%) contrast(82%);
 }
+.gh-view-all{
+  border-bottom: 2px #A99766 solid;
+}
+.gh-openmap-btn{
+  width: 236px;
+  height: 44px;
+  background: #404040;
+  border-radius: 100px;
+  color: #FAFAFA !important;
+}
+.gh-openmap-btn svg{
+  margin-left: 47px;
+}
+.gh-openmap-btn:hover{
+  filter: unset !important;
+  background: #5D5D5D !important;
+}
+.gh-playstore-btn{
+  width: 236px;
+  height: 40px;
+  border: 2px solid #404040;
+  border-radius: 100px;
+  color: #404040 !important;
+}
+.gh-playstore-btn svg{
+  margin-left: 47px;
+}
+.gh-playstore-btn:hover{
+  filter: unset !important;
+  background: #E0E0E0 !important;
+}
 .gh-flyout-col2{
   width: 30%;
   max-width: 400px;
@@ -167,19 +198,11 @@
   padding: 0 10px 50px 50px;
   /* border-right: #1c1c1d 1px solid; */
 }
-.gh-flyout-col2 div a{
-}
-.gh-flyout-col2 div a:hover{
-}
 .gh-flyout-col3{
   width: 40%;
   max-width: 468px;
   padding: 0 10px 50px 30px;
   border-left: #E3E3E3 1px solid;
-}
-.gh-flyout-col3 div a{
-}
-.gh-flyout-col3 div a:hover{
 }
 .gh-flyout-col3 div img{
   vertical-align: middle;
@@ -472,6 +495,36 @@
   }
   .gh-flyout-col1 div a{
     color: #FAFAFA;
+  }
+  .gh-openmap-btn{
+    width: 95%;
+    height: 44px;
+    background: #fafafa;
+    border-radius: 100px;
+    color: #404040 !important;
+  }
+  .gh-openmap-btn svg{
+    margin-left: 23%;
+    filter: invert(80%) sepia(12%) saturate(0%) hue-rotate(243deg) brightness(96%) contrast(82%);
+  }
+  .gh-openmap-btn:hover{
+    filter: unset !important;
+    background: #EBEBEB !important;
+  }
+  .gh-playstore-btn{
+    width: 95%;
+    height: 40px;
+    border: 2px solid #fafafa;
+    border-radius: 100px;
+    color: #fafafa !important;
+  }
+  .gh-playstore-btn svg{
+    margin-left: 24%;
+    filter: invert(100%) sepia(5%) saturate(2%) hue-rotate(96deg) brightness(109%) contrast(96%);
+  }
+  .gh-playstore-btn:hover{
+    filter: unset !important;
+    background: #404040 !important;
   }
   .gh-log-in-m a{
     display: block;
