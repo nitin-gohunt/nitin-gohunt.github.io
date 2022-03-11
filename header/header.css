@@ -351,9 +351,10 @@
 }
 
 @media screen and (max-width: 999px) {
-  /* .gh-nav-heading > div{
-    display: none;
-  } */
+  .gohunt-header:hover {
+    background: unset;
+    transition: unset;
+  }
   .gh-flyout-col1 h6, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up{
     display: none;
   }
