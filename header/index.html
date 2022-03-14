@@ -239,7 +239,7 @@
               </div>
             </div>
             <div class="wrap-heading">
-              <div class="gh-nav-item"><a href="https://shop.gohunt.com/" target="_blank">SHOP</a></div>            
+              <div class="gh-nav-item"><a href="https://shop.gohunt.com/" target="_blank">Shop</a></div>            
               <div class="gh-flyout"></div>
             </div>
             <div class="wrap-heading">
@@ -535,6 +535,10 @@ $('.gh-flyout:has(".gh-flyout-col1")').siblings('.gh-nav-item').click(function (
     }
   }
 });
+
+// Remove chevron icon and external icon to Shop
+$(".gh-flyout:not(:has(*))").siblings('.gh-nav-item').addClass('gh-no-after');
+$('.gh-nav-item a:contains("Shop")').parent().removeClass('gh-no-after').addClass('gh-external-link-after');
 
 //Desktop User Icon Hover - Menu Open
 $('.gh-user-menu-hover').hover(function(){

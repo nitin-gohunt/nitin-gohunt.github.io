@@ -504,6 +504,12 @@
 /* *************************************/
 
 @media screen and (max-width: 999px) {
+  .gh-external-link-after:after{
+    content: url(./img/gh-ex-link-ico.svg) !important;
+  }
+  .gh-no-after:after{
+    content:none !important;
+  }
   .gohunt-header:hover {
     background: unset;
     transition: unset;
