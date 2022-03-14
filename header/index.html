@@ -291,58 +291,63 @@
 
     <!-- Search BAR -->
     <div class="gh-header-search" style="display: none;">
-      <!-- for search text box on header -->
       <div class="gh-search-block">
         <svg class="gh-search-bar-ico"><use xlink:href="#gh-search-ico"/></svg>
         <input class="gh-search-input" type="text" placeholder="Search GOHUNT" autocomplete="off">
         <span class ="gh-search-clear">Clear</span>
         <svg class="gh-search-close-ico"><use xlink:href="#gh-close-mob-ico"/></svg>
       </div>
+
       <!-- for search data display with tabs -->
       <div class="go_search_showhide_wrap">
         <div class="go_search_showhide">
-            <!-- Nav tabs -->
-            <ul class="gh-search-nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#all">All</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#article">Articles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#video">Videos</a>
-                </li>
-            </ul>
-            <!-- End Nav tabs -->
-            <!-- Tab panes Data -->
-            <div class="tab-content">
-                <div id="all" class="container tab-pane active"><br>
-                    <div class="ghsearch__results row d-none">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="well search-result"></div>
-                        </div>
+          <ul class="gh-search-nav-tabs">
+            <li>
+                <a id="tab-all" class="active" href="#all">All</a>
+            </li>
+            <li>
+                <a id="tab-article" class="inactive" href="#article">Articles</a>
+            </li>
+            <li>
+                <a id="tab-video" class="inactive" href="#video">Videos</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes Data -->
+          <div class="tab-content">
+            <div id="search-result-all">
+              <div class="search-results">
+                <div class="search-result-item">
+                  <img src="./temp/hero-img-2.jpg">
+                  <div>
+                    <a href=""><h4>Lessons learned from a 2020 archery elk hunt — Part 2</h4></a>
+                    <p>Round two of important lessons learned from 2020 to take into the 2021 hunting season</p>
+                    <div>
+                      <a href="">Skills</a> <a href="">INSIDER</a> <a href="">BASECamp</a>
                     </div>
+                  </div>
                 </div>
-                <div id="article" class="container tab-pane fade"><br>
-                    <div class="ghsearch__results row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="well search-result"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="video" class="container tab-pane fade"><br>
-                    <div class="ghsearch__results row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="well search-result"></div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- End for search data display with tabs -->
+
+            <div id="search-result-article">
+              <div class="search-results">
+                
+              </div>
+            </div>
+
+            <div id="search-result-video">
+              <div class="search-results">
+                
+              </div>
+            </div>
+          </div>
+          <!-- End for search data display with tabs -->
         </div>
       </div>
       <!-- End for search text box on header -->
-  </div>
+    </div>
+
   </header>
 
   <!--  * SVG MAP FoR GOHUNT HEADER  * This will have all the svg icon with an id. -->
@@ -402,7 +407,7 @@
 
 
 <script>
-// Mobile Menu Navigation
+// Header - Mobile Menu Navigation
 $('.gh-hamburger-ico').click(function () {
   $('.gh-nav-wrap').css('display', 'block');
   $(".gh-nav-wrap-2").animate({left: '0'}, "fast");
@@ -442,6 +447,7 @@ $('.gh-nav-account-back').click(function () {
 $('.gh-search-ico').click(function () {
   $('.gh-header-search').css('display', 'block');
   $('.gh-header-search').animate({top: '0'}, "fast");
+  $('.gh-search-input').val("");
   $(".gh-search-input").focus();
 });
 $('.gh-search-close-ico').click(function () {
@@ -464,6 +470,18 @@ $('.gh-search-input').on('keypress keyup keydown', function () {
   } else {
     $('.go_search_showhide_wrap').css('display', 'block');
   }
+});
+
+// Search Tabs
+$('.gh-search-nav-tabs li a').click(function(){
+  $('.gh-search-nav-tabs li a').removeClass('active'); 
+  $(this).addClass('active');
+  $('#search-result-all').css('display', 'none');
+  $('#search-result-article').css('display', 'none');
+  $('#search-result-video').css('display', 'none');
+  if($(this).attr('id') == 'tab-all') $('#search-result-all').css('display', 'block');
+  if($(this).attr('id') == 'tab-article') $('#search-result-article').css('display', 'block');
+  if($(this).attr('id') == 'tab-video') $('#search-result-video').css('display', 'block');
 });
 
 // Mobile Menu Items
