@@ -484,11 +484,15 @@ $('.gh-search-ico').click(function () {
 $('.gh-search-close-ico').click(function () {
   $('.go_search_showhide_wrap').css('display', 'none');
   $(".gh-header-search").animate({top: '-64px'}, "fast");
+  $(".wrap-heading").css('display', 'none');
+  $(".wrap-heading").each(function(index) { $(this).delay(100*index).fadeIn(200); });
 });
 $('.go_search_showhide_wrap').on('click', function(e) {
   if (e.target !== this) return;
   $('.go_search_showhide_wrap').css('display', 'none');
   $(".gh-header-search").animate({top: '-64px'}, "fast");
+  $(".wrap-heading").css('display', 'none');
+  $(".wrap-heading").each(function(index) { $(this).delay(100*index).fadeIn(200); });
 });
 $('.gh-search-clear').click(function () {
   $('.gh-search-input').val("");
