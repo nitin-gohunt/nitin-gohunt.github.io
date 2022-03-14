@@ -18,6 +18,7 @@
 .gohunt-header:hover .gh-point > span,
 .gohunt-header:hover .gh-logo .gh-gohunt-logo,
 .gohunt-header:hover .gh-user-menu-ico, 
+.gohunt-header:hover .gh-hamburger-ico, 
 .gohunt-header:hover .gh-search-ico, 
 .gohunt-header:hover .gh-cart-ico{
   color: #E5E5E5;
@@ -31,6 +32,7 @@
 .transparent-dark .gh-log-in a,
 .transparent-dark .gh-point > span,
 .transparent-dark .gh-user-menu-ico, 
+.transparent-dark .gh-hamburger-ico, 
 .transparent-dark .gh-search-ico, 
 .transparent-dark .gh-cart-ico {
   color: #1c1c1d;
@@ -38,6 +40,16 @@
 }
 .transparent-light{
   background: transparent;
+}
+.transparent-light .gh-nav-heading div a,
+.transparent-light .gh-log-in a,
+.transparent-light .gh-point > span,
+.transparent-light .gh-user-menu-ico, 
+.transparent-light .gh-hamburger-ico, 
+.transparent-light .gh-search-ico, 
+.transparent-light .gh-cart-ico {
+  color: #fafafa;
+  fill: #fafafa;
 }
 /* .transparent-light ~ div #gh-user-menu-circle{
   stroke: #fafafa4a !important;
@@ -511,8 +523,13 @@
     content:none !important;
   }
   .gohunt-header:hover {
-    background: unset;
-    transition: unset;
+    /* color: unset; */
+    /* fill: unset; */
+    /* background: unset; */
+    /* transition: unset; */
+  }
+  .transparent-dark .gh-nav-heading div a {
+    color: #fafafa;
   }
   .gh-flyout-col1 h6, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up{
     display: none;
