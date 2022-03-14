@@ -41,7 +41,7 @@
 .transparent-light{
   background: transparent;
 }
-.transparent-light .gh-nav-heading div a,
+/* .transparent-light .gh-nav-heading div a,
 .transparent-light .gh-log-in a,
 .transparent-light .gh-point > span,
 .transparent-light .gh-user-menu-ico, 
@@ -50,7 +50,7 @@
 .transparent-light .gh-cart-ico {
   color: #fafafa;
   fill: #fafafa;
-}
+} */
 /* .transparent-light ~ div #gh-user-menu-circle{
   stroke: #fafafa4a !important;
 } */
