@@ -490,6 +490,12 @@ $('.gh-usr-profile').click(function () {
     $('.gh-nav-item-account').css('display', 'none');
     $('.gh-nav-account-back').css('display', 'block');
     $('.gh-nav-account-menu').css('display', 'flex');
+  } else {
+    if($('.gh-nav-account-menu').css('display') == 'flex'){ 
+      $('.gh-nav-account-menu').css('display', 'none');
+    } else {
+      $('.gh-nav-account-menu').css('display', 'flex');
+    }
   }
 });
 
