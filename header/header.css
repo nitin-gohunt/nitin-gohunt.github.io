@@ -552,7 +552,7 @@
   .transparent-dark .gh-nav-heading div a {
     color: #fafafa;
   }
-  .gh-flyout-col1 h6, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up{
+  .gh-flyout-col1 h6, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up, .flyout-spacer{
     display: none;
   }
   .gh-hamburger-ico, .gh-nav-item-menu, .gh-nav-item-account, .gh-log-in-m, .gh-sign-up-m{
@@ -727,6 +727,9 @@
   }
   .gh-flyout-col1 div a{
     color: #FAFAFA;
+  }
+  .gh-flyout-col1 div a:hover{
+    background: unset;
   }
   .gh-flyout-col1 div a svg{
     filter: invert(100%) sepia(0%) saturate(5613%) hue-rotate(260deg) brightness(123%) contrast(96%);
