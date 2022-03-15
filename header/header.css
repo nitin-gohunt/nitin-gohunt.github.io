@@ -426,6 +426,9 @@
   line-height: 21px;
   align-items: center;
   color: #333333;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .gh-search-clear{
   font-family: 'Inter';
