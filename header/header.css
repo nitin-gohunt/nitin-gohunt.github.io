@@ -155,12 +155,13 @@
   font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
   font-weight: 600;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .gh-flyout-col1 div{
-  margin-bottom: 0px;
+  margin-bottom: -3px;
   margin-left: -10px;
 }
 .gh-flyout-col1 div a, .gh-flyout-col2 div a, .gh-flyout-col3 div a{
@@ -171,7 +172,7 @@
 }
 .gh-flyout-col1 div a{
   border-radius: 6px;
-  padding: 15px 12px;
+  padding: 12px 12px;
 }
 .gh-flyout-col1 div a:hover{
   background: #E0E0E0;
