@@ -441,9 +441,12 @@
   </section>
 </body>
 
+<script>
+  // currentUser - script - supriya
+</script>
 
 <script>
-// Header - Mobile Menu Navigation
+// Header - Mobile Menu Navigation - NitinK
 $('.gh-hamburger-ico').click(function () {
   $('.gh-nav-wrap').css('display', 'block');
   $(".gh-nav-wrap-2").animate({left: '0'}, "fast");
@@ -633,70 +636,68 @@ $( window ).resize(function() {
     $('.gh-nav-account-menu').css('display', 'none');    
   }
 });
-</script>
 
-<script>
-  //********************************//
-  // Hide Header on on scroll down  //
-  //********************************//
-  var didScroll;
-  var lastScrollTop = 0;
-  var delta = 5;
-  var navbarHeight = $('header').outerHeight();
+//********************************//
+// Hide Header on on scroll down  //
+//********************************//
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
 
-  // Setting body padding-top 0 for transparent class
-  if ($('header').hasClass('transparent-dark') || $('header').hasClass('transparent-light')) {$("body").css("padding-top", "0px");}
-  else {$("body").css("padding-top", "64px");}
+// Setting body padding-top 0 for transparent class
+if ($('header').hasClass('transparent-dark') || $('header').hasClass('transparent-light')) {$("body").css("padding-top", "0px");}
+else {$("body").css("padding-top", "64px");}
 
-  $(window).scroll(function(event){
-      didScroll = true;
-  });
+$(window).scroll(function(event){
+  didScroll = true;
+});
 
-  setInterval(function() {
-      if (didScroll) {
-          hasScrolled();
-          didScroll = false;
-      }
-  }, 250);
-
-  function hasScrolled() {
-    var st = $(this).scrollTop();
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-
-    // remove transparent class on scroll
-    if (st > navbarHeight){
-      if ($('header').hasClass('transparent-dark')) {
-        $('header').removeClass('transparent-dark').addClass('transparent-dark_check');
-      }
-      if ($('header').hasClass('transparent-light')) {
-        $('header').removeClass('transparent-light').addClass('transparent-light_check');
-      }
-    }
-    else {
-      if ($('header').hasClass('transparent-dark_check')) {
-        $('header').addClass('transparent-dark').removeClass('transparent-dark_check');
-      }
-      if ($('header').hasClass('transparent-light_check')) {
-        $('header').addClass('transparent-light').removeClass('transparent-light_check');
-      }      
-    }
-
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('header').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
-        }
-    }    
-    lastScrollTop = st;
+setInterval(function() {
+  if (didScroll) {
+    hasScrolled();
+    didScroll = false;
   }
-</script>
+}, 250);
 
+function hasScrolled() {
+  var st = $(this).scrollTop();
+  // Make sure they scroll more than delta
+  if(Math.abs(lastScrollTop - st) <= delta)
+      return;
+
+  // remove transparent class on scroll
+  if (st > navbarHeight){
+    if ($('header').hasClass('transparent-dark')) {
+      $('header').removeClass('transparent-dark').addClass('transparent-dark_check');
+    }
+    if ($('header').hasClass('transparent-light')) {
+      $('header').removeClass('transparent-light').addClass('transparent-light_check');
+    }
+  }
+  else {
+    if ($('header').hasClass('transparent-dark_check')) {
+      $('header').addClass('transparent-dark').removeClass('transparent-dark_check');
+    }
+    if ($('header').hasClass('transparent-light_check')) {
+      $('header').addClass('transparent-light').removeClass('transparent-light_check');
+    }      
+  }
+
+  // If they scrolled down and are past the navbar, add class .nav-up.
+  // This is necessary so you never see what is "behind" the navbar.
+  if (st > lastScrollTop && st > navbarHeight){
+      // Scroll Down
+      $('header').removeClass('nav-down').addClass('nav-up');
+  } else {
+      // Scroll Up
+      if(st + $(window).height() < $(document).height()) {
+          $('header').removeClass('nav-up').addClass('nav-down');
+      }
+  }    
+  lastScrollTop = st;
+}
+// END - Hide Header on on scroll down  //
+</script>
 
 </html>  
