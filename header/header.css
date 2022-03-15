@@ -20,7 +20,8 @@
 .gohunt-header:hover .gh-user-menu-ico, 
 .gohunt-header:hover .gh-hamburger-ico, 
 .gohunt-header:hover .gh-search-ico, 
-.gohunt-header:hover .gh-cart-ico{
+.gohunt-header:hover .gh-cart-ico,
+.gohunt-header:hover .gh-cart-filled-ico{
   color: #E5E5E5;
   fill: #E5E5E5;
   transition: .5s ease-in-out;
@@ -34,7 +35,8 @@
 .transparent-dark .gh-user-menu-ico, 
 .transparent-dark .gh-hamburger-ico, 
 .transparent-dark .gh-search-ico, 
-.transparent-dark .gh-cart-ico {
+.transparent-dark .gh-cart-ico,
+.transparent-dark .gh-cart-filled-ico {
   color: #1c1c1d;
   fill: #1c1c1d;
 }
@@ -47,7 +49,8 @@
 .transparent-light .gh-user-menu-ico, 
 .transparent-light .gh-hamburger-ico, 
 .transparent-light .gh-search-ico, 
-.transparent-light .gh-cart-ico {
+.transparent-light .gh-cart-ico,
+.transparent-light .gh-cart-filled-ico {
   color: #fafafa;
   fill: #fafafa;
 } */
@@ -269,6 +272,31 @@
 }
 .gh-cart-ico:hover{
   fill: #E5E5E5;
+}
+.gh-cart-filled-ico{
+  margin-left: 32px;
+  margin-top: 4px;
+  width: 21px;
+  height: 21px;
+  fill: #FAFAFA;
+}
+.gh-cart-filled-ico:hover{
+  fill: #E5E5E5;
+}
+.gh-cart-count{
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 8px;
+  color: #FFFFFF;
+  background: #F37735;
+  border-radius: 8px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 16px;
+  height: 13px;
+  text-align: center;
+  padding-top: 3px;
 }
 .gh-point{
   margin-left: 10px;
