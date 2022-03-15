@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="https://www.gohunt.com/content/dam/gohunt/images/default/favicon.ico"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
@@ -473,6 +473,14 @@ $('.gh-nav-account-back').click(function () {
       $('.gh-nav-item-account').css('display', 'flex');
       $('.gh-nav-account-menu').css('display', 'none');
 });
+
+// Closing menu with escape key
+// $(document).keyup(function(e) {
+//   if (e.keyCode == 27) { 
+//     // $('.gh-flyout').css('visibility', 'hidden');
+//     if (!$('.gh-flyout').hasClass("visible")) {$('.gh-flyout').toggleClass("hidden")}
+//   }
+// });
 
 // Search Bar for Mobile and Desktop
 $('.gh-search-ico').click(function () {

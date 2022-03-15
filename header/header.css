@@ -128,14 +128,14 @@
   transform: scaleX(1);
 } */
 .flyout-spacer{
-  width: calc((100% - 1168px)/2);
+  width: 5%;
   background:#EEE;
 }
 .gh-flyout-col1{
   width: 25%;
   max-width: 300px;
   background: #EEE;
-  padding: 0 10px 50px 10px;
+  padding: 0 16px 48px 0px;
   box-sizing: border-box;
 }
 .gh-flyout-col1 h6, .gh-flyout-col2 h6, .gh-flyout-col3 h6{
@@ -148,6 +148,9 @@
   margin: 31px 0px;
   color: #8E8E92;
 }
+.gh-flyout-col1 h6{
+  margin-bottom: 16px;
+}
 .gh-flyout-col1 div, .gh-flyout-col2 div, .gh-flyout-col3 div{
   font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
   font-weight: 600;
@@ -156,14 +159,22 @@
   text-transform: capitalize;
   margin-bottom: 24px;
 }
+.gh-flyout-col1 div{
+  margin-bottom: 0px;
+  margin-left: -10px;
+}
 .gh-flyout-col1 div a, .gh-flyout-col2 div a, .gh-flyout-col3 div a{
   color: #404040;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
-.gh-flyout-col1 div a:hover, .gh-flyout-col2 div a:hover{
-  filter: invert(36%) sepia(0%) saturate(0%) hue-rotate(216deg) brightness(99%) contrast(95%);
+.gh-flyout-col1 div a{
+  border-radius: 6px;
+  padding: 15px 12px;
+}
+.gh-flyout-col1 div a:hover{
+  background: #E0E0E0;
 }
 .gh-flyout-col1 div svg{
   vertical-align: middle;
@@ -180,8 +191,10 @@
   width: 236px;
   height: 44px;
   background: #404040;
-  border-radius: 100px;
+  border-radius: 100px !important;
+  padding: 0px 0px !important;
   color: #FAFAFA !important;
+  margin: 28px 0 10px 0;
 }
 .gh-openmap-btn svg{
   margin-left: 47px;
@@ -194,8 +207,10 @@
   width: 236px;
   height: 40px;
   border: 2px solid #404040;
-  border-radius: 100px;
+  border-radius: 100px !important;
+  padding: 0px 0px !important;
   color: #404040 !important;
+  margin: 28px 0 10px 0;
 }
 .gh-playstore-btn svg{
   margin-left: 47px;
@@ -206,16 +221,21 @@
 }
 .gh-flyout-col2{
   width: 30%;
-  max-width: 400px;
+  max-width: 500px;
   box-sizing: border-box;
-  padding: 0 10px 50px 50px;
-  /* border-right: #1c1c1d 1px solid; */
+  padding: 0 32px 48px 32px;
+}
+.gh-flyout-col2 div a:hover{
+  filter: invert(36%) sepia(0%) saturate(0%) hue-rotate(216deg) brightness(99%) contrast(95%);
 }
 .gh-flyout-col3{
   width: 40%;
-  max-width: 468px;
-  padding: 0 10px 50px 30px;
+  max-width: 600px;
+  padding: 0 16px 48px 32px;
   border-left: #E3E3E3 1px solid;
+}
+.gh-flyout-col3 div a:hover{
+  color: #5d5d5d;
 }
 .gh-flyout-col3 div img{
   vertical-align: middle;
