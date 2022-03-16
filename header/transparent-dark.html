@@ -436,7 +436,9 @@
   </section>
 </body>
 
-
+<script>
+  // currentUser - script - supriya
+</script>
 
 <script>
   // Header - Mobile Menu Navigation - NitinK
@@ -601,6 +603,11 @@
       if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'visible'); }    
     }, function(){
       if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'hidden'); }
+  });
+  $('.gh-flyout').hover(function(){
+      if ($(window).width() > 999) { $(this).css('visibility', 'visible'); }    
+    }, function(){
+      if ($(window).width() > 999) { $(this).css('visibility', 'hidden'); }
   });
   let flyout_hover = 0;
   $('.gh-nav-item').click(function () {
