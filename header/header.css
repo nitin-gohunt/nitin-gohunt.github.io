@@ -928,7 +928,14 @@
   }
   /* Mobile Search Bar */
   .gh-search-input{
-    font-size: 14px;
+    font-size: 16px;
+    margin-left: 0px;
+  }
+  .gh-search-block {
+    justify-content: space-evenly;
+  }
+  .gh-search-clear {
+    margin: -3px 0px 0 -6px;
   }
   
 }
