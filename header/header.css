@@ -291,8 +291,8 @@
   background: #F37735;
   border-radius: 8px;
   position: absolute;
-  top: -5px;
-  right: -10px;
+  top: 12px;
+  right: 161px;
   width: 16px;
   height: 13px;
   text-align: center;
@@ -617,6 +617,26 @@
     position: absolute;
     right: 62px;
     top: 18px;
+  }
+  .gh-cart-filled-ico{
+    position: absolute;
+    right: 62px;
+    top: 18px;
+  }
+  .gh-cart-count{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 8px;
+    color: #FFFFFF;
+    background: #F37735;
+    border-radius: 8px;
+    position: absolute;
+    top: 13px;
+    right: 50px;
+    width: 16px;
+    height: 13px;
+    text-align: center;
+    padding-top: 3px;
   }
   .gh-point{
     display: none;
