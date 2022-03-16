@@ -491,16 +491,11 @@ $('.gh-usr-profile').click(function () {
     $('.gh-nav-account-back').css('display', 'block');
     $('.gh-nav-account-menu').css('display', 'flex');
   } else {
-    // $( ".gh-usr-profile" ).one( "click", function() {
-    //   $('.gh-nav-account-menu').css('display', 'flex');
-    //   console.log("one time")
-    // });
-    console.log("one time")
-    // if($('.gh-nav-account-menu').css('display') == 'flex'){      
-    //   $('.gh-nav-account-menu').css('display', 'none');
-    // } else {      
-    //   $('.gh-nav-account-menu').css('display', 'flex');
-    // }
+    if($('.gh-nav-account-menu').css('display') == 'flex'){      
+      $('.gh-nav-account-menu').css('display', 'none');
+    } else {      
+      $('.gh-nav-account-menu').css('display', 'flex');
+    }
   }
 });
 
