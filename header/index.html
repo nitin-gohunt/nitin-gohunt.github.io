@@ -599,11 +599,29 @@ $('.gh-user-menu-hover').hover(function(){
     if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "flex"); }    
   }, function(){
     if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "none"); }
-  });
+});
 $('.gh-nav-account-menu').hover(function(){
     if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "flex"); }
   }, function(){
     if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "none"); }
+});
+
+//Desktop Flyout Menu - Hover and Open/Close by click
+$('.gh-nav-item').hover(function(){
+    if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'visible'); }    
+  }, function(){
+    if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'hidden'); }
+});
+let flyout_hover = 0;
+$('.gh-nav-item').click(function () {
+  if ($(window).width() > 999) {
+    if($(this).siblings('.gh-flyout').css('visibility') == 'hidden' || flyout_hover==0){      
+      $(this).siblings('.gh-flyout').css('visibility', 'visible');
+      } else {      
+        $(this).siblings('.gh-flyout').css('visibility', 'hidden');
+      }
+      flyout_hover = 1;
+  }
 });
 
 // Screen Resize
