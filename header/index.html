@@ -612,6 +612,11 @@ $('.gh-nav-item').hover(function(){
   }, function(){
     if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'hidden'); }
 });
+$('.gh-flyout').hover(function(){
+    if ($(window).width() > 999) { $(this).css('visibility', 'visible'); }    
+  }, function(){
+    if ($(window).width() > 999) { $(this).css('visibility', 'hidden'); }
+});
 let flyout_hover = 0;
 $('.gh-nav-item').click(function () {
   if ($(window).width() > 999) {
