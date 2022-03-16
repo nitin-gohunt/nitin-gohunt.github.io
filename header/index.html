@@ -490,6 +490,7 @@ $('.gh-nav-account-back').click(function () {
   $('.gh-nav-item-account').css('display', 'flex');
   $('.gh-nav-account-menu').css('display', 'none');
 });
+let ac_hover = 0;
 $('.gh-usr-profile').click(function () {
   if($(window).width() <= 999){
     $('.gh-nav-wrap').css('display', 'block');
@@ -501,13 +502,14 @@ $('.gh-usr-profile').click(function () {
     $('.gh-nav-item-account').css('display', 'none');
     $('.gh-nav-account-back').css('display', 'block');
     $('.gh-nav-account-menu').css('display', 'flex');
-  } else {
-    console.log("one time")
-    if($('.gh-nav-account-menu').css('display') == 'flex'){      
-      $('.gh-nav-account-menu').css('display', 'none');
-    } else {      
+  } 
+  else {
+    if($('.gh-nav-account-menu').css('display') == 'none' || ac_hover==0){      
       $('.gh-nav-account-menu').css('display', 'flex');
+    } else {      
+      $('.gh-nav-account-menu').css('display', 'none');
     }
+    ac_hover = 1;
   }
 });
 
