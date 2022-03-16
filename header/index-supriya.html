@@ -438,258 +438,279 @@
 </script>
 
 <script>
-// Header - Mobile Menu Navigation - NitinK
-$('.gh-hamburger-ico').click(function () {
-  $('.gh-nav-wrap').css('display', 'block');
-  $(".gh-nav-wrap-2").animate({left: '0'}, "fast");
-  $('body').css('overflow-y', 'hidden');
-});
-$('.gh-close-mob-ico').click(function () {
-  $(".gh-nav-wrap-2").animate({left: '-322px'}, "fast");
-  setTimeout(function(){$('.gh-nav-wrap').css('display', 'none');}, 200);
-  $('body').css('overflow-y', 'unset');
-});
-$('.gh-nav-wrap').on('click', function(e) {
-  if($(window).width() <= 999){
-    if (e.target !== this) return;
-    $('.gh-nav-wrap').css('display', 'none');
-    $(".gh-nav-wrap-2").css('left', '-322px');
-    $('body').css('overflow-y', 'unset');
-
-    $('.gh-nav-account-back').css('display', 'none');
-    $('.gh-nav-item-menu').css('display', 'block');
-    $('.gh-nav-heading').css('display', 'block');
-    $('.gh-nav-item-account').css('display', 'flex');
-    $('.gh-nav-account-menu').css('display', 'none');
-  }
-});
-
-// Mobile Account Menu
-$('.gh-nav-item-account').click(function () {
-  $('.gh-nav-item-menu').css('display', 'none');
-  $('.gh-nav-heading').css('display', 'none');
-  $('.gh-nav-item-account').css('display', 'none');
-  $('.gh-nav-account-back').css('display', 'block');
-  $('.gh-nav-account-menu').css('display', 'flex');
-});
-$('.gh-nav-account-back').click(function () {
-  $('.gh-nav-account-back').css('display', 'none');
-  $('.gh-nav-item-menu').css('display', 'block');
-  $('.gh-nav-heading').css('display', 'block');
-  $('.gh-nav-item-account').css('display', 'flex');
-  $('.gh-nav-account-menu').css('display', 'none');
-});
-$('.gh-usr-profile').click(function () {
-  if($(window).width() <= 999){
+  // Header - Mobile Menu Navigation - NitinK
+  $('.gh-hamburger-ico').click(function () {
     $('.gh-nav-wrap').css('display', 'block');
     $(".gh-nav-wrap-2").animate({left: '0'}, "fast");
     $('body').css('overflow-y', 'hidden');
-
+  });
+  $('.gh-close-mob-ico').click(function () {
+    $(".gh-nav-wrap-2").animate({left: '-322px'}, "fast");
+    setTimeout(function(){$('.gh-nav-wrap').css('display', 'none');}, 200);
+    $('body').css('overflow-y', 'unset');
+  });
+  $('.gh-nav-wrap').on('click', function(e) {
+    if($(window).width() <= 999){
+      if (e.target !== this) return;
+      $('.gh-nav-wrap').css('display', 'none');
+      $(".gh-nav-wrap-2").css('left', '-322px');
+      $('body').css('overflow-y', 'unset');
+  
+      $('.gh-nav-account-back').css('display', 'none');
+      $('.gh-nav-item-menu').css('display', 'block');
+      $('.gh-nav-heading').css('display', 'block');
+      $('.gh-nav-item-account').css('display', 'flex');
+      $('.gh-nav-account-menu').css('display', 'none');
+    }
+  });
+  
+  // Mobile Account Menu
+  $('.gh-nav-item-account').click(function () {
     $('.gh-nav-item-menu').css('display', 'none');
     $('.gh-nav-heading').css('display', 'none');
     $('.gh-nav-item-account').css('display', 'none');
     $('.gh-nav-account-back').css('display', 'block');
     $('.gh-nav-account-menu').css('display', 'flex');
-  } else {
-    if($('.gh-nav-account-menu').css('display') == 'flex'){      
-      $('.gh-nav-account-menu').css('display', 'none');
-    } else {      
-      $('.gh-nav-account-menu').css('display', 'flex');
-    }
-  }
-});
-
-// Closing menu with escape key
-// $(document).keyup(function(e) {
-//   if (e.keyCode == 27) { 
-//     // $('.gh-flyout').css('visibility', 'hidden');
-//     if (!$('.gh-flyout').hasClass("visible")) {$('.gh-flyout').toggleClass("hidden")}
-//   }
-// });
-
-// Search Bar for Mobile and Desktop
-$('.gh-search-ico').click(function () {
-  $('.gh-header-search').css('display', 'block');
-  $('.gh-header-search').animate({top: '0'}, "fast");
-  $('.gh-search-input').val("");
-  $(".gh-search-input").focus();
-});
-$('.gh-search-close-ico').click(function () {
-  $('.go_search_showhide_wrap').css('display', 'none');
-  $(".gh-header-search").animate({top: '-64px'}, "fast");
-  $(".wrap-heading").css('display', 'none');
-  $(".wrap-heading").each(function(index) { $(this).delay(100*index).fadeIn(200); });
-});
-$('.go_search_showhide_wrap').on('click', function(e) {
-  if (e.target !== this) return;
-  $('.go_search_showhide_wrap').css('display', 'none');
-  $(".gh-header-search").animate({top: '-64px'}, "fast");
-  $(".wrap-heading").css('display', 'none');
-  $(".wrap-heading").each(function(index) { $(this).delay(100*index).fadeIn(200); });
-});
-$('.gh-search-clear').click(function () {
-  $('.gh-search-input').val("");
-  $('.gh-search-input').focus();
-  $('.go_search_showhide_wrap').css('display', 'none');
-});
-$('.gh-search-input').on('keypress keyup keydown', function () {
-  if ($(this).val() === "") {
-    $('.go_search_showhide_wrap').css('display', 'none');
-  } else {
-    $('.go_search_showhide_wrap').css('display', 'block');
-  }
-});
-
-// Search Tabs
-$('.gh-search-nav-tabs li a').click(function(){
-  $('.gh-search-nav-tabs li a').removeClass('active'); 
-  $(this).addClass('active');
-  $('#search-result-all').css('display', 'none');
-  $('#search-result-article').css('display', 'none');
-  $('#search-result-video').css('display', 'none');
-  if($(this).attr('id') == 'tab-all') $('#search-result-all').css('display', 'block');
-  if($(this).attr('id') == 'tab-article') $('#search-result-article').css('display', 'block');
-  if($(this).attr('id') == 'tab-video') $('#search-result-video').css('display', 'block');
-});
-
-// Mobile Menu Items
-var gh_mobile_menu_check;
-$('.gh-flyout:has(".gh-flyout-col1")').siblings('.gh-nav-item').click(function () {
-  if($(window).width() <= 999){
-    event.preventDefault();
-    if(gh_mobile_menu_check == undefined || gh_mobile_menu_check == 'closed'){
+  });
+  $('.gh-nav-account-back').click(function () {
+    $('.gh-nav-account-back').css('display', 'none');
+    $('.gh-nav-item-menu').css('display', 'block');
+    $('.gh-nav-heading').css('display', 'block');
+    $('.gh-nav-item-account').css('display', 'flex');
+    $('.gh-nav-account-menu').css('display', 'none');
+  });
+  let ac_hover = 0;
+  $('.gh-usr-profile').click(function () {
+    if($(window).width() <= 999){
+      $('.gh-nav-wrap').css('display', 'block');
+      $(".gh-nav-wrap-2").animate({left: '0'}, "fast");
+      $('body').css('overflow-y', 'hidden');
+  
       $('.gh-nav-item-menu').css('display', 'none');
-      $(this).removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
-      $(this).next().children('.gh-flyout-col1').css('display', 'block');  
-      $(this).parent().siblings().css('display', 'none');
+      $('.gh-nav-heading').css('display', 'none');
       $('.gh-nav-item-account').css('display', 'none');
-      gh_mobile_menu_check = 'opened';
+      $('.gh-nav-account-back').css('display', 'block');
+      $('.gh-nav-account-menu').css('display', 'flex');
     } 
     else {
-      $('.gh-nav-item-menu').css('display', 'block');
-      $(this).removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
-      $(this).next().children('.gh-flyout-col1').css('display', 'none');  
-      $(this).parent().siblings().css('display', 'block');
-      $('.gh-nav-item-account').css('display', 'flex');
-      gh_mobile_menu_check = 'closed';
-    }
-  }
-});
-
-// Remove chevron icon and external icon to Shop
-$(".gh-flyout:not(:has(*))").siblings('.gh-nav-item').addClass('gh-no-after');
-$('.gh-nav-item a:contains("Shop")').parent().removeClass('gh-no-after').addClass('gh-external-link-after');
-
-//Desktop User Icon Hover - Menu Open
-$('.gh-user-menu-hover').hover(function(){
-    if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "flex"); }    
-  }, function(){
-    if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "none"); }
-  });
-$('.gh-nav-account-menu').hover(function(){
-    if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "flex"); }
-  }, function(){
-    if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "none"); }
-});
-
-// Screen Resize
-var last_gh_header_width = $(window).width();
-$( window ).resize(function() {  
-  if ($(window).width() <= 999 && $(window).width()!=last_gh_header_width) {
-    // For Mobile Resize
-    $('.gh-nav-wrap').css('display', 'none');
-    $(".gh-nav-wrap-2").css('left', '-322px');
-    $('.gh-nav-item-menu').css('display', 'block');
-    $('.gh-flyout-col1').css('display', 'none');
-    $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
-    $('.gh-nav-item').parent().siblings().css('display', 'block');
-    $('.gh-nav-item-account').css('display', 'flex');
-
-    $('.gh-nav-account-back').css('display', 'none');
-    $('.gh-nav-heading').css('display', 'flex');
-    $('.gh-nav-account-menu').css('display', 'none');
-    gh_mobile_menu_check = 'closed';
-    last_gh_header_width = $(window).width();
-    // console.log('w',$(window).width());
-  }
-  if ($(window).width() > 999) {
-    // For Desktop Resize
-    $('.gh-nav-wrap').css('display', 'block');
-    $('body').css('overflow-y', 'unset');    
-    $('.gh-nav-item-menu').css('display', 'none');
-    $('.gh-flyout-col1').css('display', 'block');  
-    $('.gh-nav-heading').children().css('display', 'block');
-    $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
-    $('.gh-nav-item').parent().siblings().css('display', 'block');
-    $('.gh-nav-item-account').css('display', 'none');
-
-    $('.gh-nav-account-back').css('display', 'none');
-    $('.gh-nav-heading').css('display', 'flex');
-    $('.gh-nav-account-menu').css('display', 'none');    
-  }
-});
-
-//********************************//
-// Hide Header on on scroll down  //
-//********************************//
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
-
-// Setting body padding-top 0 for transparent class
-if ($('header').hasClass('transparent-dark') || $('header').hasClass('transparent-light')) {$("body").css("padding-top", "0px");}
-else {$("body").css("padding-top", "64px");}
-
-$(window).scroll(function(event){
-  didScroll = true;
-});
-
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
-
-function hasScrolled() {
-  var st = $(this).scrollTop();
-  // Make sure they scroll more than delta
-  if(Math.abs(lastScrollTop - st) <= delta)
-      return;
-
-  // remove transparent class on scroll
-  if (st > navbarHeight){
-    if ($('header').hasClass('transparent-dark')) {
-      $('header').removeClass('transparent-dark').addClass('transparent-dark_check');
-    }
-    if ($('header').hasClass('transparent-light')) {
-      $('header').removeClass('transparent-light').addClass('transparent-light_check');
-    }
-  }
-  else {
-    if ($('header').hasClass('transparent-dark_check')) {
-      $('header').addClass('transparent-dark').removeClass('transparent-dark_check');
-    }
-    if ($('header').hasClass('transparent-light_check')) {
-      $('header').addClass('transparent-light').removeClass('transparent-light_check');
-    }      
-  }
-
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight){
-      // Scroll Down
-      $('header').removeClass('nav-down').addClass('nav-up');
-  } else {
-      // Scroll Up
-      if(st + $(window).height() < $(document).height()) {
-          $('header').removeClass('nav-up').addClass('nav-down');
+      if($('.gh-nav-account-menu').css('display') == 'none' || ac_hover==0){      
+        $('.gh-nav-account-menu').css('display', 'flex');
+      } else {
+        $('.gh-nav-account-menu').css('display', 'none');
       }
-  }    
-  lastScrollTop = st;
-}
-// END - Hide Header on on scroll down  //
-</script>
+      ac_hover = 1;
+    }
+  });
+  
+  // Closing menu with escape key
+  // $(document).keyup(function(e) {
+  //   if (e.keyCode == 27) { 
+  //     // $('.gh-flyout').css('visibility', 'hidden');
+  //     if (!$('.gh-flyout').hasClass("visible")) {$('.gh-flyout').toggleClass("hidden")}
+  //   }
+  // });
+  
+  // Search Bar for Mobile and Desktop
+  $('.gh-search-ico').click(function () {
+    $('.gh-header-search').css('display', 'block');
+    $('.gh-header-search').animate({top: '0'}, "fast");
+    $('.gh-search-input').val("");
+    $(".gh-search-input").focus();
+  });
+  $('.gh-search-close-ico').click(function () {
+    $('.go_search_showhide_wrap').css('display', 'none');
+    $(".gh-header-search").animate({top: '-64px'}, "fast");
+    $(".wrap-heading").css('display', 'none');
+    $(".wrap-heading").each(function(index) { $(this).delay(100*index).fadeIn(200); });
+  });
+  $('.go_search_showhide_wrap').on('click', function(e) {
+    if (e.target !== this) return;
+    $('.go_search_showhide_wrap').css('display', 'none');
+    $(".gh-header-search").animate({top: '-64px'}, "fast");
+    $(".wrap-heading").css('display', 'none');
+    $(".wrap-heading").each(function(index) { $(this).delay(100*index).fadeIn(200); });
+  });
+  $('.gh-search-clear').click(function () {
+    $('.gh-search-input').val("");
+    $('.gh-search-input').focus();
+    $('.go_search_showhide_wrap').css('display', 'none');
+  });
+  $('.gh-search-input').on('keypress keyup keydown', function () {
+    if ($(this).val() === "") {
+      $('.go_search_showhide_wrap').css('display', 'none');
+    } else {
+      $('.go_search_showhide_wrap').css('display', 'block');
+    }
+  });
+  
+  // Search Tabs
+  $('.gh-search-nav-tabs li a').click(function(){
+    $('.gh-search-nav-tabs li a').removeClass('active'); 
+    $(this).addClass('active');
+    $('#search-result-all').css('display', 'none');
+    $('#search-result-article').css('display', 'none');
+    $('#search-result-video').css('display', 'none');
+    if($(this).attr('id') == 'tab-all') $('#search-result-all').css('display', 'block');
+    if($(this).attr('id') == 'tab-article') $('#search-result-article').css('display', 'block');
+    if($(this).attr('id') == 'tab-video') $('#search-result-video').css('display', 'block');
+  });
+  
+  // Mobile Menu Items
+  var gh_mobile_menu_check;
+  $('.gh-flyout:has(".gh-flyout-col1")').siblings('.gh-nav-item').click(function () {
+    if($(window).width() <= 999){
+      event.preventDefault();
+      if(gh_mobile_menu_check == undefined || gh_mobile_menu_check == 'closed'){
+        $('.gh-nav-item-menu').css('display', 'none');
+        $(this).removeClass('gh-nav-item').addClass('gh-nav-item-clicked');
+        $(this).next().children('.gh-flyout-col1').css('display', 'block');  
+        $(this).parent().siblings().css('display', 'none');
+        $('.gh-nav-item-account').css('display', 'none');
+        gh_mobile_menu_check = 'opened';
+      } 
+      else {
+        $('.gh-nav-item-menu').css('display', 'block');
+        $(this).removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+        $(this).next().children('.gh-flyout-col1').css('display', 'none');  
+        $(this).parent().siblings().css('display', 'block');
+        $('.gh-nav-item-account').css('display', 'flex');
+        gh_mobile_menu_check = 'closed';
+      }
+    }
+  });
+  
+  // Remove chevron icon and external icon to Shop
+  $(".gh-flyout:not(:has(*))").siblings('.gh-nav-item').addClass('gh-no-after');
+  $('.gh-nav-item a:contains("Shop")').parent().removeClass('gh-no-after').addClass('gh-external-link-after');
+  
+  //Desktop User Icon Hover - Menu Open
+  $('.gh-user-menu-hover').hover(function(){
+      if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "flex"); }    
+    }, function(){
+      if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "none"); }
+  });
+  $('.gh-nav-account-menu').hover(function(){
+      if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "flex"); }
+    }, function(){
+      if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "none"); }
+  });
+  
+  //Desktop Flyout Menu - Hover and Open/Close by click
+  $('.gh-nav-item').hover(function(){
+      if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'visible'); }    
+    }, function(){
+      if ($(window).width() > 999) { $(this).siblings('.gh-flyout').css('visibility', 'hidden'); }
+  });
+  let flyout_hover = 0;
+  $('.gh-nav-item').click(function () {
+    if ($(window).width() > 999) {
+      if($(this).siblings('.gh-flyout').css('visibility') == 'hidden' || flyout_hover==0){      
+        $(this).siblings('.gh-flyout').css('visibility', 'visible');
+        } else {      
+          $(this).siblings('.gh-flyout').css('visibility', 'hidden');
+        }
+        flyout_hover = 1;
+    }
+  });
+  
+  // Screen Resize
+  var last_gh_header_width = $(window).width();
+  $( window ).resize(function() {  
+    if ($(window).width() <= 999 && $(window).width()!=last_gh_header_width) {
+      // For Mobile Resize
+      $('.gh-nav-wrap').css('display', 'none');
+      $(".gh-nav-wrap-2").css('left', '-322px');
+      $('.gh-nav-item-menu').css('display', 'block');
+      $('.gh-flyout-col1').css('display', 'none');
+      $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+      $('.gh-nav-item').parent().siblings().css('display', 'block');
+      $('.gh-nav-item-account').css('display', 'flex');
+  
+      $('.gh-nav-account-back').css('display', 'none');
+      $('.gh-nav-heading').css('display', 'flex');
+      $('.gh-nav-account-menu').css('display', 'none');
+      gh_mobile_menu_check = 'closed';
+      last_gh_header_width = $(window).width();
+      // console.log('w',$(window).width());
+    }
+    if ($(window).width() > 999) {
+      // For Desktop Resize
+      $('.gh-nav-wrap').css('display', 'block');
+      $('body').css('overflow-y', 'unset');    
+      $('.gh-nav-item-menu').css('display', 'none');
+      $('.gh-flyout-col1').css('display', 'block');  
+      $('.gh-nav-heading').children().css('display', 'block');
+      $('.gh-nav-item-clicked').removeClass('gh-nav-item-clicked').addClass('gh-nav-item');
+      $('.gh-nav-item').parent().siblings().css('display', 'block');
+      $('.gh-nav-item-account').css('display', 'none');
+  
+      $('.gh-nav-account-back').css('display', 'none');
+      $('.gh-nav-heading').css('display', 'flex');
+      $('.gh-nav-account-menu').css('display', 'none');    
+    }
+  });
+  
+  //********************************//
+  // Hide Header on on scroll down  //
+  //********************************//
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('header').outerHeight();
+  
+  // Setting body padding-top 0 for transparent class
+  if ($('header').hasClass('transparent-dark') || $('header').hasClass('transparent-light')) {$("body").css("padding-top", "0px");}
+  else {$("body").css("padding-top", "64px");}
+  
+  $(window).scroll(function(event){
+    didScroll = true;
+  });
+  
+  setInterval(function() {
+    if (didScroll) {
+      hasScrolled();
+      didScroll = false;
+    }
+  }, 250);
+  
+  function hasScrolled() {
+    var st = $(this).scrollTop();
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+  
+    // remove transparent class on scroll
+    if (st > navbarHeight){
+      if ($('header').hasClass('transparent-dark')) {
+        $('header').removeClass('transparent-dark').addClass('transparent-dark_check');
+      }
+      if ($('header').hasClass('transparent-light')) {
+        $('header').removeClass('transparent-light').addClass('transparent-light_check');
+      }
+    }
+    else {
+      if ($('header').hasClass('transparent-dark_check')) {
+        $('header').addClass('transparent-dark').removeClass('transparent-dark_check');
+      }
+      if ($('header').hasClass('transparent-light_check')) {
+        $('header').addClass('transparent-light').removeClass('transparent-light_check');
+      }      
+    }
+  
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }    
+    lastScrollTop = st;
+  }
+  // END - Hide Header on on scroll down  //
+  </script>
 
 </html>  
