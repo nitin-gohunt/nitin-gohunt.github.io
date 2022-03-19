@@ -584,15 +584,10 @@
   $('.gh-nav-item a:contains("Shop")').parent().removeClass('gh-no-after').addClass('gh-external-link-after');
   
   //Desktop User Icon Hover - Menu Open
-  $('.gh-user-menu-hover').hover(function(){
+  $('.gh-user-menu-hover, .gh-nav-account-menu').hover(function(){
       if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "flex"); }    
     }, function(){
-      if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "none"); }
-  });
-  $('.gh-nav-account-menu').hover(function(){
-      if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "flex"); }
-    }, function(){
-      if ($(window).width() > 999) { $('.gh-nav-account-menu').css("display", "none"); }
+      if ($(window).width() > 999) {$('.gh-nav-account-menu').css("display", "none");ac_hover = 0; }
   });
   
   //Desktop Flyout Menu - Hover and Open/Close by click

@@ -868,6 +868,7 @@
     border-top:1px #404040 solid;
     margin: auto 0 16px 0;
     padding-top: 16px;
+    cursor: pointer;
   }
   .gh-usr-profile-left-nav{
     width: 32px;
