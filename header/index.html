@@ -514,12 +514,13 @@ $('.gh-usr-profile').click(function () {
 });
 
 // Closing menu with escape key
-// $(document).keyup(function(e) {
-//   if (e.keyCode == 27) { 
-//     // $('.gh-flyout').css('visibility', 'hidden');
-//     if (!$('.gh-flyout').hasClass("visible")) {$('.gh-flyout').toggleClass("hidden")}
-//   }
-// });
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) { 
+    $('.gh-nav-account-menu').css("display", "none");ac_hover = 0;
+    $('.gh-flyout').css('transition-delay', '.1s');
+    $('.gh-flyout').css('visibility', 'hidden');
+  }
+});
 
 // Search Bar for Mobile and Desktop
 $('.gh-search-ico').click(function () {
