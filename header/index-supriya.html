@@ -504,10 +504,16 @@
   
   // Closing menu with escape key
   $(document).keyup(function(e) {
-    if (e.keyCode == 27) { 
-      $('.gh-nav-account-menu').css("display", "none");ac_hover = 0;
-      $('.gh-flyout').css('transition-delay', '.1s');
-      $('.gh-flyout').css('visibility', 'hidden');
+    if (e.keyCode == 27) {
+      if($(window).width() <= 999){
+        $(".gh-nav-wrap-2").animate({left: '-322px'}, "fast");
+        setTimeout(function(){$('.gh-nav-wrap').css('display', 'none');}, 200);
+        $('body').css('overflow-y', 'unset');
+      } else {
+        $('.gh-nav-account-menu').css("display", "none");ac_hover = 0;
+        $('.gh-flyout').css('transition-delay', '.1s');
+        $('.gh-flyout').css('visibility', 'hidden');
+      }
     }
   });
   
