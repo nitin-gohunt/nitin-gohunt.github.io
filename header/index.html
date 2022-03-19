@@ -463,8 +463,8 @@ $('.gh-close-mob-ico').click(function () {
 $('.gh-nav-wrap').on('click', function(e) {
   if($(window).width() <= 999){
     if (e.target !== this) return;
-    $('.gh-nav-wrap').css('display', 'none');
-    $(".gh-nav-wrap-2").css('left', '-322px');
+    $(".gh-nav-wrap-2").animate({left: '-322px'}, "fast");
+    setTimeout(function(){$('.gh-nav-wrap').css('display', 'none');}, 200);
     $('body').css('overflow-y', 'unset');
 
     $('.gh-nav-account-back').css('display', 'none');
