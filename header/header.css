@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 .gohunt-header {
   width: 100%;
   height: 64px;
@@ -29,7 +32,7 @@
 .transparent-dark {
   background: transparent;
 }
-.transparent-dark .gh-nav-heading div a,
+.transparent-dark .gh-nav-heading .wrap-heading a,
 .transparent-dark .gh-log-in a,
 .transparent-dark .gh-point > span,
 .transparent-dark .gh-user-menu-ico, 
@@ -43,7 +46,7 @@
 .transparent-light{
   background: transparent;
 }
-/* .transparent-light .gh-nav-heading div a,
+/* .transparent-light .gh-nav-heading .wrap-heading a,
 .transparent-light .gh-log-in a,
 .transparent-light .gh-point > span,
 .transparent-light .gh-user-menu-ico, 
@@ -76,7 +79,7 @@
 .gh-nav-wrap{
   flex: 1;
 }
-.gh-nav-heading{
+.gh-nav-heading, .gh-nav-heading .aem-Grid {
   display: flex;
   font-family: 'HCo Ringside Wide', 'Inter', 'Hevetica', 'Arial', sans-serif;
   font-size: 12px;
@@ -84,7 +87,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.gh-nav-heading > div{
+.gh-nav-heading  .wrap-heading{
   margin-left: 32px;
 }
 .gh-nav-heading .gh-nav-item a{
@@ -588,7 +591,7 @@
     /* background: unset; */
     /* transition: unset; */
   }
-  .transparent-dark .gh-nav-heading div a {
+  .transparent-dark .gh-nav-heading .wrap-heading a {
     color: #fafafa;
   }
   .gh-flyout-col1 h6, .gh-flyout-col2, .gh-flyout-col3, .gh-log-in, .gh-sign-up, .flyout-spacer{
@@ -698,17 +701,17 @@
     background: #AA9767;
     border-radius: 20px;
   }
-  .gh-nav-heading{    
+  .gh-nav-heading, .gh-nav-heading .aem-Grid{    
     flex-direction: column;    
   }
-  .gh-nav-heading > div {
+  .gh-nav-heading .wrap-heading {
     margin: 0px 18px;
     padding: 22px 0;
     font-size: 18px;
     border-bottom: 1px solid #404040;
     position: relative;
   }
-  .gh-nav-heading div .gh-nav-item::after {
+  .gh-nav-heading .wrap-heading .gh-nav-item::after {
     position: absolute;
     right: 7px;
     top: 22px;
@@ -869,6 +872,13 @@
     margin: auto 0 16px 0;
     padding-top: 16px;
     cursor: pointer;
+  }
+  .gh-user-menu-ico-account{
+    width: 32px;
+    height: 32px;
+    margin: 5px 8px 0px 16px;
+    box-sizing: border-box;
+    fill: #EEE;
   }
   .gh-usr-profile-left-nav{
     width: 32px;
